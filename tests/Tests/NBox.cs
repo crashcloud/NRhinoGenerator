@@ -7,6 +7,7 @@ using Rhino.Geometry;
 namespace Tests
 {
 
+	[TestFixture]
 	public class NBox_Tests
 	{
 		public const int TEST_COUNT = 10_000;

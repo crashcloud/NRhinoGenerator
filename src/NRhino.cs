@@ -4,4 +4,11 @@
 
 	public static NRandomQuery Random { get; set; }
 	public static NEventQuery Event { get; set; }
+
+	static NRhino()
+	{
+		Random = new();
+		Event = new();
+	}
+
 }

@@ -7,4 +7,11 @@
 	// View?
 	// Object?
 	public NObjectQuery Object { get; set; }
+
+	internal NRandomQuery()
+	{
+		Geometry = new();
+		Object = new();
+	}
+
 }
