@@ -1,18 +1,47 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>net48;net7.0</TargetFrameworks>
-	  <LangVersion>latest</LangVersion>
+	<PropertyGroup>
+	<TargetFrameworks>net48;net7.0</TargetFrameworks>
+		<IsPackable>true</IsPackable>
+		<Platforms>AnyCPU;x64</Platforms>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>NRhinoGenerator </Title>
+		<Authors>Callum Sykes</Authors>
+		<Company>Crash</Company>
+		<Product>$(AssemblyName)</Product>
+		<Copyright>Crash</Copyright>
+		<PackageProjectUrl>https://github.com/crashcloud/$(AssemblyName)</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/crashcloud/$(AssemblyName)</RepositoryUrl>
+		<PackageTags>$(AssemblyName), Rhino, NUnit</PackageTags>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<EnableNETAnalyzers>True</EnableNETAnalyzers>
+		<AnalysisLevel>6.0-recommended</AnalysisLevel>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<IncludeSymbols>True</IncludeSymbols>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AssemblyVersion>0.1.0</AssemblyVersion>
+		<ErrorReport>send</ErrorReport>
+		<Version>$(AssemblyVersion)</Version>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>$(AssemblyName) is an open source .NET library for generating Rhino geometry primitives such as points, lines, circles, arcs, curves, surfaces, meshes, and more. </Description>
+	</PropertyGroup>
 
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-	<PackageReference Include="RhinoCommon" Version="7.21.22208.13001" IncludeAssets="compile;build" Condition="'$(TargetFramework)' == 'net48'" />
-	<PackageReference Include="RhinoCommon" Version="8.0.23094.11475-wip" IncludeAssets="compile;build" Condition="'$(TargetFramework)' == 'net7.0'" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NUnit" Version="3.12.0" />
+		<PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+		<PackageReference Include="RhinoCommon" Version="7.21.22208.13001" IncludeAssets="compile;build" Condition="'$(TargetFramework)' == 'net48'" />
+		<PackageReference Include="RhinoCommon" Version="8.0.23094.11475-wip" IncludeAssets="compile;build" Condition="'$(TargetFramework)' == 'net7.0'" />
+	</ItemGroup>
 
 </Project>
