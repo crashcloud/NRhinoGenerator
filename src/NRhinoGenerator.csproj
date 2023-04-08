@@ -17,7 +17,7 @@
 		<PackageTags>$(AssemblyName), Rhino, NUnit</PackageTags>
 		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
-		<AnalysisLevel>6.0-recommended</AnalysisLevel>
+		<AnalysisLevel>7.0-recommended</AnalysisLevel>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<IncludeSymbols>True</IncludeSymbols>
 		<ImplicitUsings>enable</ImplicitUsings>
