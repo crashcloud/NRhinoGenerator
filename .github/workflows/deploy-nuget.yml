@@ -32,5 +32,4 @@
                 dotnet nuget disable source 'nuget.org'
     
                 dotnet build src/NRhinoGenerator.csproj --configuration Release --no-restore
-                dotnet pack src/NRhinoGenerator.csproj --configuration Release --no-build --no-restore -o ./artifacts
-                dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"        
+                dotnet nuget push src/bin/**/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"        
