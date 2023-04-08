@@ -31,6 +31,6 @@
                 dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/crashcloud/index.json"
                 dotnet nuget disable source 'nuget.org'
     
-                dotnet build src/*.csproj --configuration Release --no-restore
-                dotnet pack src/*.csproj --configuration Release --no-build --no-restore -o ./artifacts
+                dotnet build src/NRhinoGenerator.csproj --configuration Release --no-restore
+                dotnet pack src/NRhinoGenerator.csproj --configuration Release --no-build --no-restore -o ./artifacts
                 dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"        
