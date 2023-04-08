@@ -20,22 +20,15 @@ NRhinoGenerator is an open source .NET library for generating Rhino geometry pri
 1. Install the NRhinoGenerator NuGet package from the NuGet Gallery or using the package manager console:
 
 ```
-mathematicaCopy code
 Install-Package NRhinoGenerator
 ```
 
-1. Add the NRhinoGenerator namespace to your code:
-
-```
-csharpCopy code
-using NRhinoGenerator;
-```
 
 ## Usage
 
 The NRhinoGenerator library provides various methods and classes to control the generation and testing process. For example:
 
-```
+``` csharp
 NRhino.Random.Geometry.NVector3d.Any();
 NRhino.Random.Geometry.NPoint3d.Positive();
 NRhino.Random.Geometry.NMesh.Inside(bounds);
@@ -47,4 +40,4 @@ Contributions are welcome! If you want to add new features, fix bugs, or improve
 
 ## License
 
-NRhinoGenerator is released under the [MIT License](https://chat.openai.com/chat/LICENSE).
+NRhinoGenerator is released under the MIT License
