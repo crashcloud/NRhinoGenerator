@@ -21,7 +21,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<IncludeSymbols>True</IncludeSymbols>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<AssemblyVersion>0.1.1</AssemblyVersion>
+		<AssemblyVersion>0.1.2</AssemblyVersion>
 		<ErrorReport>send</ErrorReport>
 		<Version>$(AssemblyVersion)</Version>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
