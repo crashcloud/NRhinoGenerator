@@ -7,8 +7,8 @@
 		NUtils.IsValid(bounds);
 
 		double x = TestContext.CurrentContext.Random.NextDouble(bounds.Min.X, bounds.Max.X);
-		double y = TestContext.CurrentContext.Random.NextDouble(bounds.Min.X, bounds.Max.X);
-		double z = TestContext.CurrentContext.Random.NextDouble(bounds.Min.X, bounds.Max.X);
+		double y = TestContext.CurrentContext.Random.NextDouble(bounds.Min.Y, bounds.Max.Y);
+		double z = TestContext.CurrentContext.Random.NextDouble(bounds.Min.Z, bounds.Max.Z);
 
 		return new Point3d(x, y, z);
 	}
