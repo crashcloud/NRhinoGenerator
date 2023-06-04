@@ -12,7 +12,7 @@ orbs:
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:    
   unit-test:
-    executor: rhino
+    executor: default
     steps:
       - checkout
 
