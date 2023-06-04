@@ -17,6 +17,15 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+  
+  unit-test:
+    machine:
+      image: windows-default
+    steps:
+      # Commands are run in a Windows virtual machine environment
+        - checkout
+        - run: Write-Host 'Hello, Windows'
+
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
@@ -24,3 +33,7 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+
+  unit-test-workflow:
+    jobs:
+      - unit-test
