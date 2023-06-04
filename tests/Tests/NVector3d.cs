@@ -7,7 +7,6 @@ using Rhino.Geometry;
 namespace Tests
 {
 
-	[TestFixture]
 	public class NVector3d_Tests
 	{
 		public const int TEST_COUNT = 10_000;
