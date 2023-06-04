@@ -2,17 +2,17 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-executors:
-  windows-executor:
-    docker:
-      - image: mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019
+# The Windows orb gives you everything you
+# need to start using the Windows executor.
+orbs:
+  win: circleci/windows@5.0
 
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:    
   unit-test:
-    executor: windows-executor
+    executor: win/default
     steps:
       - checkout
 
