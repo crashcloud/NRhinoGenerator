@@ -5,14 +5,14 @@ version: 2.1
 # The Windows orb gives you everything you
 # need to start using the Windows executor.
 orbs:
-  win: circleci/windows@5.0
+  rhino: crashcloud/rhino@0.1.1
 
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:    
   unit-test:
-    executor: win/default
+    executor: rhino
     steps:
       - checkout
 
