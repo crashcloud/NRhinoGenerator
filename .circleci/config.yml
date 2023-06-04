@@ -2,6 +2,12 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+executors:
+  windows-executor:
+    docker:
+      - image: mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019
+
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
@@ -14,17 +20,21 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
+
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-  
-  unit-test:
-    machine:
-      image: windows-default
-    steps:
-      # Commands are run in a Windows virtual machine environment
-        - checkout
-        - run: Write-Host 'Hello, Windows'
+          name: Restore NuGet Packages
+          command: nuget restore YourSolution.sln
+
+      - run:
+          name: Build
+          command: dotnet build NRhinoGenerator.sln /p:Configuration=Release
+
+      - run:
+          name: Run Tests
+          command: |
+            # Change the path and command according to your test project
+            cd NRhinoGenerator
+            dotnet test tests/Tests/Tests.csproj
 
 
 # Orchestrate jobs using workflows
