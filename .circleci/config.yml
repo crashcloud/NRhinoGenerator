@@ -18,7 +18,7 @@ jobs:
 
       - run:
           name: Restore NuGet Packages
-          command: nuget restore YourSolution.sln
+          command: nuget restore NRhinoGenerator.sln
 
       - run:
           name: Build
