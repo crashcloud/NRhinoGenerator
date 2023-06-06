@@ -12,7 +12,11 @@ orbs:
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:    
   unit-test:
-    executor: default
+    machine:
+      image: 'windows-server-2022-gui:current'
+      resource_class: windows.medium
+      shell: powershell.exe -ExecutionPolicy Bypass
+
     steps:
       - checkout
 
@@ -35,6 +39,6 @@ jobs:
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  unit-test-workflow:
+  unit-test:
     jobs:
-      - unit-test
+      - rhino/setup_rhino
