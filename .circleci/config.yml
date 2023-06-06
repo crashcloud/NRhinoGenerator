@@ -18,6 +18,11 @@ jobs:
       shell: powershell.exe -ExecutionPolicy Bypass
 
     steps:
+    
+      - rhino/setup_rhino:
+          version: '7'
+          token: 'TEST'
+
       - checkout
 
       - run:
@@ -41,6 +46,4 @@ jobs:
 workflows:
   unit-test:
     jobs:
-      - rhino/setup_rhino:
-          version: '7'
-          token: REPLACE_ME
+      - checkout
