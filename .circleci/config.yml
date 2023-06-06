@@ -18,12 +18,12 @@ jobs:
       shell: powershell.exe -ExecutionPolicy Bypass
 
     steps:
+
+      - checkout
     
       - rhino/setup_rhino:
           version: '7'
           token: 'TEST'
-
-      - checkout
 
       - run:
           name: Restore NuGet Packages
