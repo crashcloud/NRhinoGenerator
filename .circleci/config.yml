@@ -11,7 +11,7 @@ orbs:
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:    
-  unit-test:
+  setup-env:
     machine:
       image: 'windows-server-2022-gui:current'
       resource_class: windows.medium
@@ -41,4 +41,6 @@ jobs:
 workflows:
   unit-test:
     jobs:
-      - rhino/setup_rhino
+      - rhino/setup_rhino:
+        version: '7'
+        token: REPLACE_ME
