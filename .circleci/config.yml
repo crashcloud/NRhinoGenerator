@@ -42,5 +42,5 @@ workflows:
   unit-test:
     jobs:
       - rhino/setup_rhino:
-        version: '7'
-        token: REPLACE_ME
+          version: '7'
+          token: REPLACE_ME
