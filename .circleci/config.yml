@@ -40,3 +40,10 @@ jobs:
             cd NRhinoGenerator
             dotnet test tests/Tests/Tests.csproj
 
+
+# Orchestrate jobs using workflows
+# See: https://circleci.com/docs/configuration-reference/#workflows
+workflows:
+  unit-test:
+    jobs:
+      - setup-env
