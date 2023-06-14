@@ -23,7 +23,6 @@ jobs:
     
       - rhino/setup_rhino:
           version: '7'
-          token: $RHINO_CORE_TOKEN
 
       - run:
           name: Restore NuGet Packages
