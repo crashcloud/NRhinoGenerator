@@ -7,6 +7,7 @@ using Rhino.Geometry;
 namespace Tests
 {
 
+	[MultiRhinoFixtureAttribute]
 	public class NPoint3d_Tests
 	{
 		public const int TEST_COUNT = 10_000;
