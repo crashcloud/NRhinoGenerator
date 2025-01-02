@@ -43,15 +43,15 @@
 
 			for (int i = 0; i < testCount; i++)
 			{
-				var bounds = NRhino.Random.Geometry.NBox.Any().BoundingBox;
-				Assert.That(bounds.IsValid, Is.True);
+				var box = NRhino.Random.Geometry.NBox.Any().BoundingBox;
+				Assert.That(box.IsValid, Is.True);
 
 				for (int j = 0; j < TEST_COUNT; j++)
 				{
-					Vector3d vector = NRhino.Random.Geometry.NVector3d.Inside(bounds);
-					Assert.That(vector.X, Is.GreaterThan(bounds.Min.X).And.LessThan(bounds.Max.X));
-					Assert.That(vector.Y, Is.GreaterThan(bounds.Min.Y).And.LessThan(bounds.Max.Y));
-					Assert.That(vector.Z, Is.GreaterThan(bounds.Min.Z).And.LessThan(bounds.Max.Z));
+					Vector3d vector = NRhino.Random.Geometry.NVector3d.Inside(box);
+					Assert.That(vector.X, Is.GreaterThan(box.Min.X).And.LessThan(box.Max.X));
+					Assert.That(vector.Y, Is.GreaterThan(box.Min.Y).And.LessThan(box.Max.Y));
+					Assert.That(vector.Z, Is.GreaterThan(box.Min.Z).And.LessThan(box.Max.Z));
 				}
 			}
 		}

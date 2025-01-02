@@ -1,11 +1,13 @@
-﻿public class NPoint2dQuery : NBaseGeometryQuery<Point2d>
-{
-	public override Point2d Inside(BoundingBox bounds)
-	{
-		NUtils.IsValid(bounds);
+﻿namespace NRhinoGenerator;
 
-		double x = TestContext.CurrentContext.Random.NextDouble(bounds.Min.X, bounds.Max.X);
-		double y = TestContext.CurrentContext.Random.NextDouble(bounds.Min.X, bounds.Max.X);
+public class NPoint2dQuery : NBaseGeometryQuery<Point2d>
+{
+	public override Point2d Inside(BoundingBox box)
+	{
+		NUtils.IsValid(box);
+
+		double x = TestContext.CurrentContext.Random.NextDouble(box.Min.X, box.Max.X);
+		double y = TestContext.CurrentContext.Random.NextDouble(box.Min.X, box.Max.X);
 
 		return new Point2d(x, y);
 	}

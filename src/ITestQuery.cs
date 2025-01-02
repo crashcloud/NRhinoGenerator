@@ -1,4 +1,6 @@
-﻿public interface ITestQuery
+﻿namespace NRhinoGenerator;
+
+public interface ITestQuery
 {
 
 }

@@ -1,14 +1,16 @@
-﻿public class NPoint3dQuery : NBaseGeometryQuery<Point3d>
+﻿namespace NRhinoGenerator;
+
+public class NPoint3dQuery : NBaseGeometryQuery<Point3d>
 {
 
 	/// <summary>A Random Point3d within the given boundingbox</summary>
-	public override Point3d Inside(BoundingBox bounds)
+	public override Point3d Inside(BoundingBox box)
 	{
-		NUtils.IsValid(bounds);
+		NUtils.IsValid(box);
 
-		double x = TestContext.CurrentContext.Random.NextDouble(bounds.Min.X, bounds.Max.X);
-		double y = TestContext.CurrentContext.Random.NextDouble(bounds.Min.Y, bounds.Max.Y);
-		double z = TestContext.CurrentContext.Random.NextDouble(bounds.Min.Z, bounds.Max.Z);
+		double x = TestContext.CurrentContext.Random.NextDouble(box.Min.X, box.Max.X);
+		double y = TestContext.CurrentContext.Random.NextDouble(box.Min.Y, box.Max.Y);
+		double z = TestContext.CurrentContext.Random.NextDouble(box.Min.Z, box.Max.Z);
 
 		return new Point3d(x, y, z);
 	}

@@ -1,4 +1,6 @@
-﻿public interface IRhinoQuery<T> : ITestQuery
+﻿namespace NRhinoGenerator;
+
+public interface IRhinoQuery<T> : ITestQuery
 {
 	public abstract T Any();
 	public abstract T Invalid();

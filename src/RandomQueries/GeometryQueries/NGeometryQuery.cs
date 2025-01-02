@@ -1,4 +1,6 @@
-﻿public class NGeometryQuery
+﻿namespace NRhinoGenerator;
+
+public class NGeometryQuery
 {
 	public NPoint3dQuery NPoint3d { get; set; }
 	public NVector3dQuery NVector3d { get; set; }

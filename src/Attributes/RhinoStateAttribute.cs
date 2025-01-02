@@ -7,24 +7,19 @@
 	{
 		None = 0,
 
-		Headless = 0 << 1,
-		RequiresHeaded = 0 << 2,
+		Headless = 1 << 1,
+		RequiresHeaded = 1 << 2,
 
-		Requires_7 = 0 << 3,
-		Requires_8 = 0 << 4,
+		Requires7 = 1 << 3,
+		Requires8 = 1 << 4,
 	}
 
 	/// <summary>Defines Requirements for an NQuery to run successfully</summary>
-	public sealed class RhinoStateAttribute : Attribute
+	/// <remarks>Attribute Constructor</remarks>
+	[AttributeUsage(AttributeTargets.Class)]
+	public sealed class RhinoStateAttribute(RhinoRequirements requirements) : Attribute
 	{
-		public readonly RhinoRequirements Requirements;
-
-		/// <summary>Attribute Constructor</summary>
-		public RhinoStateAttribute(RhinoRequirements requirements)
-		{
-			Requirements = requirements;
-		}
-
+		public RhinoRequirements Requirements { get; } = requirements;
 	}
 
 }

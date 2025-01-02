@@ -1,4 +1,5 @@
-﻿
+﻿namespace NRhinoGenerator;
+
 using NRhinoGenerator.Attributes;
 
 [RhinoStateAttribute(RhinoRequirements.RequiresHeaded)]

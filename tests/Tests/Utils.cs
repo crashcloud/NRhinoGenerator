@@ -1,4 +1,6 @@
-﻿public static class Utils
+﻿namespace NRhinoGenerator;
+
+public static class Utils
 {
 
 	public static void TestInside<T>(NBaseGeometryQuery<T> query)

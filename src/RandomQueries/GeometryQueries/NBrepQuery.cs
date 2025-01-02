@@ -1,4 +1,6 @@
-﻿public class NBrepQuery : NBaseGeometryQuery<Brep>
+﻿namespace NRhinoGenerator;
+
+public class NBrepQuery : NBaseGeometryQuery<Brep>
 {
 	public override Brep Inside(BoundingBox box)
 	{

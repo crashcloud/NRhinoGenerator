@@ -1,4 +1,6 @@
-﻿using Rhino.Display;
+﻿namespace NRhinoGenerator;
+
+using Rhino.Display;
 
 public partial class NEventQuery : IRhinoQuery<EventArgs>
 {
