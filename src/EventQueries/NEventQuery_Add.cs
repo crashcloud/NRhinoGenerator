@@ -1,4 +1,6 @@
-﻿public partial class NEventQuery : IRhinoQuery<EventArgs>
+﻿namespace NRhinoGenerator;
+
+public partial class NEventQuery : IRhinoQuery<EventArgs>
 {
 
 	public IEnumerable<RhinoObjectEventArgs> AddObjects(RhinoDoc doc, IEnumerable<GeometryBase> elements)

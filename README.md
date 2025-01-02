@@ -31,7 +31,7 @@ The NRhinoGenerator library provides various methods and classes to control the 
 ``` csharp
 NRhino.Random.Geometry.NVector3d.Any();
 NRhino.Random.Geometry.NPoint3d.Positive();
-NRhino.Random.Geometry.NMesh.Inside(bounds);
+NRhino.Random.Geometry.NMesh.Inside(box);
 ```
 
 ## Contribution

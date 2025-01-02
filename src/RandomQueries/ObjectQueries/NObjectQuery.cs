@@ -1,4 +1,6 @@
-﻿public class NObjectQuery : IRhinoQuery<RhinoObject>
+﻿namespace NRhinoGenerator;
+
+public class NObjectQuery : IRhinoQuery<RhinoObject>
 {
 	public CurveObject Curve() => throw new NotImplementedException();
 

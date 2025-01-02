@@ -1,4 +1,6 @@
-﻿public class NMeshQuery : NBaseGeometryQuery<Mesh>
+﻿namespace NRhinoGenerator;
+
+public class NMeshQuery : NBaseGeometryQuery<Mesh>
 {
 	public override Mesh Inside(BoundingBox box)
 	{

@@ -1,13 +1,7 @@
-﻿using System;
-
-using NUnit.Framework;
-
-using Rhino.Geometry;
-
-namespace Tests
+﻿namespace Tests
 {
 
-	[TestFixture]
+	[RhinoTestFixture]
 	public class NBox_Tests
 	{
 		public const int TEST_COUNT = 10_000;
@@ -45,7 +39,7 @@ namespace Tests
 					Box box = NRhino.Random.Geometry.NBox.Inside(bounds);
 					NUtils.IsValid(box);
 
-					Assert.That(bounds.Contains(box.BoundingBox, false), Is.True);
+					Assert.That(box.Contains(box.BoundingBox, false), Is.True);
 				}
 			}
 		}

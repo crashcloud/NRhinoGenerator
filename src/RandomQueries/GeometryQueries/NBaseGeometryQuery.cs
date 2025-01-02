@@ -1,9 +1,11 @@
-﻿public abstract class NBaseGeometryQuery<T> : ISpatialQuery<T>
+﻿namespace NRhinoGenerator;
+
+public abstract class NBaseGeometryQuery<T> : ISpatialQuery<T>
 {
 	public T Any() => Inside(new BoundingBox(short.MinValue, short.MinValue, short.MinValue,
 								short.MaxValue, short.MaxValue, short.MaxValue));
 
-	public virtual T DefaultOrNull() => default(T);
+	public virtual T DefaultOrNull() => default!;
 
 	public abstract T Inside(BoundingBox box);
 

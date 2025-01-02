@@ -29,12 +29,12 @@ internal static class NUtils
 		var state = type.GetCustomAttribute<RhinoStateAttribute>();
 		var requirements = state.Requirements;
 
-		if (requirements.HasFlag(RhinoRequirements.Requires_7))
+		if (requirements.HasFlag(RhinoRequirements.Requires7))
 		{
 			Assert.That(RhinoApp.Version.Major, Is.EqualTo(7));
 		}
 
-		if (requirements.HasFlag(RhinoRequirements.Requires_8))
+		if (requirements.HasFlag(RhinoRequirements.Requires8))
 		{
 			Assert.That(RhinoApp.Version.Major, Is.EqualTo(8));
 		}

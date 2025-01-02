@@ -1,4 +1,6 @@
-﻿public partial class NEventQuery : IRhinoQuery<EventArgs>
+﻿namespace NRhinoGenerator;
+
+public partial class NEventQuery : IRhinoQuery<EventArgs>
 {
 	public RhinoTransformObjectsEventArgs Transform(GeometryBase geometry, Transform transform) => throw new NotImplementedException();
 	public RhinoTransformObjectsEventArgs Transform(Guid rhinoId, Transform transform) => throw new NotImplementedException();

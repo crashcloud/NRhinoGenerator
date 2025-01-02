@@ -1,4 +1,6 @@
-﻿public partial class NEventQuery : IRhinoQuery<EventArgs>
+﻿namespace NRhinoGenerator;
+
+public partial class NEventQuery : IRhinoQuery<EventArgs>
 {
 	public RhinoObjectSelectionEventArgs Select() => throw new NotImplementedException();
 	public RhinoObjectSelectionEventArgs Select(IEnumerable<Guid> elements) => throw new NotImplementedException();

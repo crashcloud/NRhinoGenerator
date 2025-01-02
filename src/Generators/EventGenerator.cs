@@ -1,7 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using Rhino.Display;
 
-using Rhino;
-using Rhino.Display;
+namespace NRhinoGenerator;
 
 public static partial class EventGenerator
 {

@@ -1,13 +1,9 @@
-﻿using System;
-
-using NUnit.Framework;
-
-using Rhino.Geometry;
+﻿using NRhinoGenerator;
 
 namespace Tests
 {
 
-	[TestFixture]
+	[RhinoTestFixture]
 	public class NPoint3d_Tests
 	{
 		public const int TEST_COUNT = 10_000;
@@ -36,14 +32,14 @@ namespace Tests
 
 			for (int i = 0; i < testCount; i++)
 			{
-				var bounds = NRhino.Random.Geometry.NBox.Any().BoundingBox;
-				Assert.That(bounds.IsValid, Is.True);
+				var box = NRhino.Random.Geometry.NBox.Any().BoundingBox;
+				Assert.That(box.IsValid, Is.True);
 
 				for (int j = 0; j < TEST_COUNT; j++)
 				{
-					Point3d point = NRhino.Random.Geometry.NPoint3d.Inside(bounds);
+					Point3d point = NRhino.Random.Geometry.NPoint3d.Inside(box);
 
-					Assert.That(bounds.Contains(point), Is.True);
+					Assert.That(box.Contains(point), Is.True);
 				}
 			}
 		}

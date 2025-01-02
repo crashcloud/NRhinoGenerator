@@ -1,4 +1,6 @@
-﻿public class NRandomQuery
+﻿namespace NRhinoGenerator;
+
+public class NRandomQuery
 {
 	public NGeometryQuery Geometry { get; set; }
 	// Settings
@@ -6,12 +8,12 @@
 	// Units?
 	// View?
 	// Object?
-	public NObjectQuery Object { get; set; }
+	public NObjectQuery NObject { get; set; }
 
 	internal NRandomQuery()
 	{
 		Geometry = new();
-		Object = new();
+		NObject = new();
 	}
 
 }

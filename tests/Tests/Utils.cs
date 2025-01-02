@@ -1,6 +1,4 @@
-﻿using NUnit.Framework;
-
-using Rhino.Geometry;
+﻿namespace NRhinoGenerator;
 
 public static class Utils
 {
