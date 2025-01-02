@@ -1,13 +1,7 @@
-﻿using System;
-
-using NUnit.Framework;
-
-using Rhino.Geometry;
-
-namespace Tests
+﻿namespace Tests
 {
 
-	[TestFixture]
+	[RhinoTestFixture]
 	public class NBox_Tests
 	{
 		public const int TEST_COUNT = 10_000;

@@ -1,22 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net48;net7.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-windows</TargetFrameworks>
 		<LangVersion>latest</LangVersion>
 
 		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="NUnit" Version="3.13.3" />
-		<PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+		<PackageReference Include="NUnit" Version="3.14.0" />
+		<PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+		<PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
 		<PackageReference Include="RhinoCommon" Version="7.21.22208.13001" IncludeAssets="compile;build" Condition="'$(TargetFramework)' == 'net48'" />
 		<PackageReference Include="RhinoCommon" Version="8.0.23094.11475-wip" IncludeAssets="compile;build" Condition="'$(TargetFramework)' == 'net7.0'" />
+		<PackageReference Include="Rhino.Testing" Version="8.0.23-beta" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\src\NRhinoGenerator.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Rhino.Testings.Configs.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>

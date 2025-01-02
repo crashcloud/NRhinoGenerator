@@ -1,8 +1,4 @@
-﻿using NUnit.Framework;
-
-using Rhino.Geometry;
-
-public static class Utils
+﻿public static class Utils
 {
 
 	public static void TestInside<T>(NBaseGeometryQuery<T> query)
